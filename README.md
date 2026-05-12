@@ -1,6 +1,6 @@
 # React TicTacToe
 
-간단한 React 틱택토 게임입니다.
+React 틱택토 게임입니다.
 
 ## 프로젝트 구조
 
