@@ -1,57 +1,29 @@
-# React TicTacToe
+# ⭕ TicTakTo: React 기반 게임 및 AWS Amplify 호스팅
 
-React 틱택토 게임입니다.
+본 프로젝트는 생성형 AI를 활용하여 제작된 React 틱택토 게임이며, **AWS Amplify** 서비스를 활용한 간편 호스팅 및 배포를 목적으로 합니다.
 
-## 프로젝트 구조
+---
 
-- `public/index.html` - React 앱을 로드하는 메인 HTML
-- `src/App.js` - 틱택토 게임 로직
-- `src/App.css` - 스타일
-- `src/index.js` - React 진입점
-- `.github/workflows/deploy.yml` - AWS S3 배포 GitHub Actions 워크플로우
-- `package.json` - 프로젝트 설정 및 스크립트
+## 📝 시스템 및 기능 소개
+* **시스템 개요**: 클래식한 틱택토 게임을 현대적인 React UI로 재해석한 웹 애플리케이션입니다.
+* **주요 기능**:
+  * 실시간 승리/무승부 판정 로직
+  * 깔끔하고 직관적인 게임 인터페이스 및 초기화 기능
+  * AWS Amplify를 통한 HTTPS 보안 호스팅 적용
 
-## 실행 방법
+---
 
-```bash
-npm install
-npm start
-```
+## ☁️ AWS Amplify 서비스 활용
+* **호스팅 방식**: 별도의 워크플로우 파일 작성 없이, GitHub 리포지토리를 Amplify 서비스에 직접 연결하여 호스팅을 자동화하였습니다.
+* **배포 효율성**: 코드 수정 후 Push 시 Amplify가 변경 사항을 감지하여 즉시 업데이트된 버전을 배포합니다.
 
-브라우저에서 `http://localhost:3000`으로 접속하면 게임을 확인할 수 있습니다.
+---
 
-## 배포
+## 🔗 관련 링크
+* **GitHub Repository**: [https://github.com/gksbin04/TicTakTo](https://github.com/gksbin04/TicTakTo)
+* **Amplify 호스팅 URL**: (https://main.dl72ywjafuers.amplifyapp.com/)
+* **S3 백업 엔드포인트**: [http://tictaktobucket-20263622.s3-website-us-east-1.amazonaws.com](http://tictaktobucket-20263622.s3-website-us-east-1.amazonaws.com)
+* **Amplify 서비스 활용 영상**: [YouTube 시연 영상 바로가기](https://www.youtube.com/watch?v=qiniHBbZfrs)
 
-### 1. 빌드
-
-```bash
-npm run build
-```
-
-### 2. GitHub Actions로 AWS S3 배포
-
-`.github/workflows/deploy.yml`에 설정된 워크플로우는 다음 환경 변수를 사용합니다:
-
-- `AWS_ACCESS_KEY_ID`
-- `AWS_SECRET_ACCESS_KEY`
-- `S3_BUCKET_NAME`
-- `CLOUDFRONT_DISTRIBUTION_ID` (선택)
-
-원격 리포지터리는 다음과 같이 설정합니다:
-
-```bash
-git remote add origin https://github.com/<username>/<repo>.git
-git push -u origin main
-```
-
-## 기능
-
-- X/O 플레이어 교대
-- 승리 조건 검사
-- 무승부 감지
-- 게임 초기화 버튼
-
-## GitHub에 올리기 전
-
-- `.gitignore`가 이미 포함되어 있습니다.
-- `node_modules`와 `build` 폴더는 Git에 커밋하지 마세요.
+---
+**작성자**: 김한빈 (지능형 임베디드/백엔드 개발자 지망)
